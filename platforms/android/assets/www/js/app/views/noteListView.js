@@ -22,23 +22,18 @@
  * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
  */
+ 
 /*jshint
-         asi:true,
-         bitwise:true,
-         browser:true,
-         curly:true,
-         eqeqeq:false,
-         forin:true,
-         noarg:true,
-         noempty:true,
-         plusplus:false,
-         smarttabs:true,
-         sub:true,
-         trailing:false,
-         undef:true,
-         white:false,
-         onevar:false 
+         asi:true,  	bitwise:true,  	browser:true,  	curly:true,  	eqeqeq:false,  
+         forin:true,	noarg:true,  	noempty:true,  	plusplus:false,	smarttabs:true,	
+         sub:true, 		trailing:false, undef:true,  	white:false,  	onevar:false 
  */
+ 
+ 	//   ****************************************************************************************************************  //
+ 
+	/*   ****  :-{)  WEBD265 - Week 3 Project 3 ( noteListView.js ):  David Kemp, Caleb Mills, Chris Pendleton  :-{)  ***  */ 
+    //   ****  :-{)  Changes on  Line(s) 154 - 158   															:-{)  ***  */ 
+	
 /*global define*/
 define( [ "yasmf", "app/models/noteStorageSingleton", "text!html/noteListView.html!strip",
   "text!html/noteListView_android.html!strip", "text!html/noteListItem.html!strip",
@@ -156,7 +151,14 @@ define( [ "yasmf", "app/models/noteStorageSingleton", "text!html/noteListView.ht
               "NAME": notes[ note ].name,
               "REPRESENTATION": notes[ note ].representation,
               "MODIFIED": _y.D( notes[ note ].modifiedDate, "D" ),
-              "INFO": "" + _y.N( notes[ note ].formattedUnitValue )
+              "INFO": "" + _y.N( notes[ note ].formattedUnitValue ),
+			  		"STATUS": notes[ note ]._status  							    		//  See Note Below  :-{)
+	/**	******		ADDED on line 155:   "STATUS": notes[ note ]._status 
+     * *******   Change to noteListView.js; denotes the value of ._status for the display of the note object   	:-{)
+     */   														//  		 Addition of "Status" Property 		:-{)  	  
+			  
+			  
+			  
             } );
             // attach any event handlers
             _y.UI.event.addListener( e, "click", self.editExistingNote );

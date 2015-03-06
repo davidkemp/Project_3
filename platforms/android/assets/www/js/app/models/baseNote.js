@@ -23,22 +23,16 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 /*jshint
-         asi:true,
-         bitwise:true,
-         browser:true,
-         curly:true,
-         eqeqeq:false,
-         forin:true,
-         noarg:true,
-         noempty:true,
-         plusplus:false,
-         smarttabs:true,
-         sub:true,
-         trailing:false,
-         undef:true,
-         white:false,
-         onevar:false 
+         asi:true,  	bitwise:true,  	browser:true,  	curly:true,  	eqeqeq:false,  
+         forin:true,	noarg:true,  	noempty:true,  	plusplus:false,	smarttabs:true,	
+         sub:true, 		trailing:false, undef:true,  	white:false,  	onevar:false 
  */
+ 
+  	//   ****************************************************************************************************************  //
+ 
+	/*   ****  :-{)  WEBD265 - Week 3 Project 3 ( baseNote.js ):  David Kemp, Caleb Mills, Chris Pendleton 		:-{)  ***  */ 
+    //   ****  :-{)  Changes on  Line(s) 105 - 130   															:-{)  ***  */ 
+ 
 /*global define*/
 define( [ "yasmf" ], function( _y ) {
   /**
@@ -105,7 +99,38 @@ define( [ "yasmf" ], function( _y ) {
       get: self.getModifiedDate,
       configurable: true
     } );
-    /**
+	
+	
+	
+	/*     :-{)    ************************   Added  Status  Property   *************************      	:-{)  */
+		
+    //    Change to  baseNote.js; denotes the value of ._status for the display of the note object     	:-{)
+    //    CHANGE of "Status" Property  :-{)  	  
+				
+	 	self._status = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "New-Status";  //    "New-Status"     Label	:-{)
+											//  Added 5x spaces ( &nbsp; )  for separation	between 
+											//	   	modification date and status notification		 	:-{)
+											//  Added a status -  to be to a toggle W/icon later     	:-{)
+	     self.getStatus = function() { 
+    	   	return self._status; 
+     	};
+		 
+     	self.setStatus = function( theStatus ) { 
+       		self._status = theStatus; 
+       		self._modifiedDate = new Date(); 
+       		self.notify( "statusChanged" ); 
+     	};
+		 
+     	Object.defineProperty( self, "status", { 
+       		get: self.status, 
+       		configurable: true 
+     	} ); 
+ 	 
+ 	 
+ 		/*   :-{)   *****************  End of NEW  "Status"  Property  Changes  *****************   :-{)  */ 
+	
+	
+	/**
      * The visible name of the note. Read-write with setName and
      * getName; the property is name.
      */
