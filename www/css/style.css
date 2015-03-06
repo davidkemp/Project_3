@@ -299,6 +299,8 @@ body.android {
   font-family: "Roboto", "DroidSans", Helvetica, Arial, Sans-Serif;
   color: #484848;
 }
+/*  with newly defined class in:   noteListItem.htm  =  .ui-label-status;        */
+/*  change color & font-weight: Hexi decimal color = Purple; Font-weight = Bold  */
 .ui-label-status{
 	color:  #8B008B;
 	font-weight:  Bold;
