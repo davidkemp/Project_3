@@ -28,10 +28,11 @@
          sub:true, 		trailing:false, undef:true,  	white:false,  	onevar:false 
  */
  
-  	//   ****************************************************************************************************************  //
+ //   ****************************************************************************  //
  
-	/*   ****  :-{)  WEBD265 - Week 3 Project 3 ( baseNote.js ):  David Kemp, Caleb Mills, Chris Pendleton 		:-{)  ***  */ 
-    //   ****  :-{)  Changes on  Line(s) 105 - 130   															:-{)  ***  */ 
+ /*   ****  :-{)  WEBD265 - Week 3 Project 3 ( baseNote.js ):   		:-{)  ****  */ 
+  //               	Team:   David Kemp, Caleb Mills, Chris Pendleton  	:-{)  ****  */ 
+  //   ****  :-{)  Changes on  Line(s) 105 - 130   						:-{)  ****  */ 
  
 /*global define*/
 define( [ "yasmf" ], function( _y ) {
@@ -100,17 +101,16 @@ define( [ "yasmf" ], function( _y ) {
       configurable: true
     } );
 	
-	
-	
+		
 	/*     :-{)    ************************   Added  Status  Property   *************************      	:-{)  */
 		
     //    Change to  baseNote.js; denotes the value of ._status for the display of the note object     	:-{)
     //    CHANGE of "Status" Property  :-{)  	  
 				
 	 	self._status = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "New-Status";  //    "New-Status"     Label	:-{)
-											//  Added 5x spaces ( &nbsp; )  for separation	between 
-											//	   	modification date and status notification		 	:-{)
-											//  Added a status -  to be to a toggle W/icon later     	:-{)
+		//  Added 5x spaces ( &nbsp; )  for separation	between 
+		//	   	modification date and status notification		 	:-{)
+		//  Added a status -  to be to a toggle W/icon later     	:-{)
 	     self.getStatus = function() { 
     	   	return self._status; 
      	};
